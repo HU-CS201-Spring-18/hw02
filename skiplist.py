@@ -66,15 +66,7 @@ class Skiplist:
         pass
     
     def remove(self, x):
-        '''Remoces x from the skiplist and returns True; does not remove
+        '''Removes x from the skiplist and returns True; does not remove
         and returns False if x is not an element.
         '''
-        pass
-    
-    def truncate(self, i):
-        # As described in Exercise 4.11
-        pass
-
-    def absorb(self, l2):
-        # As described in Exercise 4.12
         pass
