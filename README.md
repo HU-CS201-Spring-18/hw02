@@ -11,3 +11,5 @@ As you solve more complicated programming problems, your code gets more complex 
 Implementing __SkiplistWithFinger__ requires inheritance. [This tutorial](https://www.python-course.eu/python3_inheritance.php) covers most of the required syntax in Python.
 
 Due: 19h, Monday, 12 Feb, 2018
+
+20:38
