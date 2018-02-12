@@ -20,8 +20,9 @@ def test_get():
     assert skiplist.get(2) == 20
     assert skiplist.get(4) == None
 
+    
 
-def test_set(): ###
+def test_set():
     skiplist= SkiplistList()
     assert skiplist.add(0, 10) == True
     assert skiplist.add(1, 20) == True
@@ -36,18 +37,17 @@ def test_set(): ###
     assert skiplist.get(3)== 44
     assert skiplist.set(2, 25) == True
     assert skiplist.get(2) == 25
-    assert skiplist.dummy.back.data == 40
     
-def test_remove(): ###
+def test_remove():
     skiplist= SkiplistList()
     assert skiplist.remove(0) == None
     skiplist.add(0, 10)
     skiplist.add(1, 20)
     skiplist.add(2, 100)
     skiplist.add(3, 40)
-    assert skiplist.remove(1) ==20
-    assert skiplist.remove(0) ==10
-    assert skiplist.remove(1) ==40
+    assert skiplist.remove(1)==20
+    assert skiplist.remove(0)==10
+    assert skiplist.remove(1)==40
     
 def test_truncate():
     skiplist = SkiplistList()
@@ -56,7 +56,7 @@ def test_truncate():
         skiplist.add(i,x)
     skiplist.truncate(5)
     assert skiplist.get(0) == 'a'
-    assert skiplist.get(-1) == 'e'
+    assert skiplist.get(4) == 'e'
     for i in range(5):
         skiplist.get(i) == a[0][i]
     skiplist = SkiplistList()
@@ -64,10 +64,9 @@ def test_truncate():
         skiplist.add(i,x)
     skiplist.truncate(7)
     assert skiplist.get(0) == 'c'
-    assert skiplist.get(-1) == 'a'
+    assert skiplist.get(6) == 'a'
     for i in range(7):
         skiplist.get(i) == a[1][i]
-    assert skiplist.dummy.back.data == 'a'
 
 def test_absorb():
     skiplist = SkiplistList()
@@ -84,9 +83,8 @@ def test_absorb():
     x=a[1]+a[2]
     for i in range(len(x)):
         assert skiplist2.get(i) == x[i]
-    assert skiplist2.dummy.back.data == 'e'
     y=a[0]+x
     skiplist.absorb(skiplist2)
     for i in range(len(y)):
         assert skiplist.get(i) == y[i]
-    assert skiplist.get(-2) == 'v'
+    assert skiplist.get(len(y)-2) == 'v'
