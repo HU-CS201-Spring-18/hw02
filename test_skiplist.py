@@ -10,9 +10,9 @@ def test_remove():
     sklist = Skiplist()
     sklist.add(1)
     sklist.add(2)
-    assert sklist.remove(1) == 1
+    assert sklist.remove(1) == True
     assert sklist.remove(1) == False
-    assert sklist.remove(2) == 2
+    assert sklist.remove(2) == True
     
 def test_find():
     sklist = Skiplist()
