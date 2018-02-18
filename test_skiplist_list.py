@@ -15,6 +15,7 @@ def test_get():
     assert skiplist.add(1, 15) == True
     assert skiplist.add(4, 40) == False
     assert skiplist.add(5, 40) == False
+    
     assert skiplist.get(0) == 10
     assert skiplist.get(1) == 15
     assert skiplist.get(2) == 20
@@ -29,6 +30,7 @@ def test_set():
     assert skiplist.add(2, 10) == True
     assert skiplist.add(3, 40) == True
     assert skiplist.add(1, 40) == True
+    
     assert skiplist.set(0, 11) == 10
     assert skiplist.get(0) == 11
     assert skiplist.set(2, 22) == 20
@@ -45,6 +47,7 @@ def test_remove():
     skiplist.add(1, 20)
     skiplist.add(2, 100)
     skiplist.add(3, 40)
+    
     assert skiplist.remove(1)==20
     assert skiplist.remove(0)==10
     assert skiplist.remove(1)==40
