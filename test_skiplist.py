@@ -37,7 +37,7 @@ def test_find_predecessor():
     assert sklist.find_predecessor(4.5)[0].data == 4
     assert sklist.find_predecessor(2.9)[0].data == 2
     assert sklist.find_predecessor(1.1)[0].data == 1
-    assert sklist.find_predecessor(0.9)[0] == None
+    assert sklist.find_predecessor(0.9)[0].data == None
     
     
 
